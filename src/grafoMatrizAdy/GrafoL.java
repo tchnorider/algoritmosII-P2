@@ -35,4 +35,33 @@ public class GrafoL {
 		this.cantNodos = cantNodos;
 	}
 
+	public void agregarArista(int origen, int destino, int peso) {
+		this.nodosAdyacentes[origen].insertar(destino, peso);
+	}
+
+	public void eliminarArista(int origen, int destino) {
+		this.nodosAdyacentes[origen].eliminar(destino);
+	}
+
+	public boolean esVacio() {
+		return this.size == 0;
+	}
+
+	public boolean sonAdyacentes(int a, int b) {
+		return this.nodosAdyacentes[a].pertenece(b);
+	}
+
+	public void eliminarVertice(int v) {
+		this.nodosUsados[v] = false;
+		this.size--;
+
+		this.nodosAdyacentes[v] = new Lista();
+		for (int i = 0; i < this.cantNodos; i++) {
+			this.nodosAdyacentes[i].eliminar(v);
+		}
+	}
+
+	public Lista verticesAdyacentes(int v){
+		return this.nodosAdyacentes[v];
+	}
 }
