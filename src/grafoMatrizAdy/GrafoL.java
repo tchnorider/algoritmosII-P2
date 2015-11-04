@@ -64,4 +64,8 @@ public class GrafoL {
 	public Lista verticesAdyacentes(int v){
 		return this.nodosAdyacentes[v];
 	}
+	
+	public boolean estaVertice(int v){
+		return this.nodosUsados[v];
+	}
 }
