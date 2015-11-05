@@ -1,4 +1,4 @@
-package grafoMatrizAdy;
+package grafoListaAdyacencia;
 
 public class ListaArco {
 
