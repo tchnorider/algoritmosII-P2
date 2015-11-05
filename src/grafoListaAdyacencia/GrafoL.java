@@ -39,6 +39,7 @@ public class GrafoL implements IGrafoL {
 
 	}
 
+	@Override
 	public void eliminarArista(int origen, int destino) {
 
 	}
@@ -51,6 +52,7 @@ public class GrafoL implements IGrafoL {
 		return this.verticesAdyacentes[a].existe(b);
 	}
 
+	@Override
 	public void eliminarVertice(int v) {
 		this.nodosUsados[v] = false;
 		this.size--;

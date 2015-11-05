@@ -8,7 +8,7 @@ public interface IGrafoM {
 
 	public void agregarVertice(int numero);
 
-	public void agregarArista(int origen, int destino);
+	public void agregarArista(int origen, int destino, int peso);
 
 	public void eliminarVertice(int numero);
 
