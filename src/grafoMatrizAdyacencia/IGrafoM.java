@@ -1,6 +1,5 @@
 package grafoMatrizAdyacencia;
 
-import listaDoble.Lista;
 
 public interface IGrafoM {
 

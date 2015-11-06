@@ -1,4 +1,4 @@
-package listaDoble;
+package grafoMatrizAdyacencia;
 
 public class NodoLD {
 	

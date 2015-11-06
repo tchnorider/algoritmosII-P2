@@ -1,4 +1,4 @@
-package listaDoble;
+package grafoListaAdyacencia;
 
 public class Lista implements IListaD {
 
@@ -18,11 +18,13 @@ public class Lista implements IListaD {
 	}
 
 	@Override
-	public void insertarInicio(int valor) {
-		NodoLD nuevoNodo = new NodoLD(valor);
+	public void insertarInicio(int dest, int peso) {
+		NodoLD nuevoNodo = new NodoLD();
 		nuevoNodo.setSiguiente(this.inicio);
 		nuevoNodo.getSiguiente().setAnterior(nuevoNodo);
 		nuevoNodo.setAnterior(null);
+		nuevoNodo.setDestino(dest);
+		nuevoNodo.setPeso(peso);
 		this.inicio = nuevoNodo;
 	}
 
@@ -38,7 +40,7 @@ public class Lista implements IListaD {
 		} else {
 			NodoLD nodoAux = this.inicio;
 			while (nodoAux != null) {
-				System.out.println(nodoAux.getElemento());
+				System.out.println(nodoAux.getDato());
 				nodoAux = nodoAux.getSiguiente();
 			}
 		}
@@ -62,7 +64,7 @@ public class Lista implements IListaD {
 	public boolean existe(int valor) {
 		NodoLD nodoAux = this.inicio;
 		while (nodoAux != null) {
-			if (nodoAux.getElemento() == valor) {
+			if (nodoAux.getDato() == valor) {
 				return true;
 			}
 			nodoAux = nodoAux.getSiguiente();
@@ -74,7 +76,7 @@ public class Lista implements IListaD {
 	public NodoLD buscarElemento(int valor) {
 		NodoLD nodoAux = this.inicio;
 		while (nodoAux != null) {
-			if (nodoAux.getElemento() == valor) {
+			if (nodoAux.getDato() == valor) {
 				return nodoAux;
 			}
 			nodoAux = nodoAux.getSiguiente();

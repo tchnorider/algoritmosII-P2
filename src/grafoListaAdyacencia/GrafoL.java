@@ -1,8 +1,7 @@
 package grafoListaAdyacencia;
 
-import listaDoble.Lista;
-
 public class GrafoL implements IGrafoL {
+	
 	private int size;
 	private int cantNodos;
 	private Lista[] verticesAdyacentes;
@@ -36,7 +35,7 @@ public class GrafoL implements IGrafoL {
 	}
 
 	public void agregarArista(int origen, int destino, int peso) {
-
+		this.verticesAdyacentes[origen].insertarInicio(destino,peso);
 	}
 
 	@Override

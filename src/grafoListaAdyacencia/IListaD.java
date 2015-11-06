@@ -1,8 +1,8 @@
-package listaDoble;
+package grafoListaAdyacencia;
 
 public interface IListaD {
 	
-	void insertarInicio(int valor);
+	void insertarInicio(int destino, int peso);
 	
 	boolean esVacia();
 	

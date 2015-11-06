@@ -1,7 +1,5 @@
 package grafoListaAdyacencia;
 
-import listaDoble.Lista;
-
 public interface IGrafoL {
 
 	public void crearGrafo(int cantMax);
