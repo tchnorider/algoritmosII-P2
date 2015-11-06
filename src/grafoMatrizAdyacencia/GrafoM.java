@@ -8,16 +8,22 @@ public class GrafoM implements IGrafoM {
 	private Arco[][] matrizNodosAdyacentes;
 	private boolean[] nodosUsados;
 
-	public GrafoM(int cant) {
+	// shall i leave this constructor?
+	public GrafoM() {
+		
+	}
+	
+	@Override
+	public void crearGrafoVacio(int maxNodos) {
 		this.size = 0;
-		this.cantNodos = cant;
-		this.matrizNodosAdyacentes = new Arco[cant + 1][cant + 1];
-		for (int i = 1; i <= cant; i++) {
-			for (int j = 1; j <= cant; j++) {
+		this.cantNodos = maxNodos;
+		this.matrizNodosAdyacentes = new Arco[maxNodos + 1][maxNodos + 1];
+		for (int i = 1; i <= maxNodos; i++) {
+			for (int j = 1; j <= maxNodos; j++) {
 				this.matrizNodosAdyacentes[i][j] = new Arco();
 			}
 		}
-		this.nodosUsados = new boolean[cant + 1];
+		this.nodosUsados = new boolean[maxNodos + 1];
 	}
 
 	@Override

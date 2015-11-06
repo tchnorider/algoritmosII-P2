@@ -2,6 +2,8 @@ package grafoMatrizAdyacencia;
 
 
 public interface IGrafoM {
+	
+	public void crearGrafoVacio(int maxNodos);
 
 	public void agregarVertice(int numero);
 

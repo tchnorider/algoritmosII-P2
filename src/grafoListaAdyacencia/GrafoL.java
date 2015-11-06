@@ -7,9 +7,10 @@ public class GrafoL implements IGrafoL {
 	private Lista[] verticesAdyacentes;
 	private boolean[] nodosUsados;
 
-	public GrafoL(int n) {
+	@Override
+	public void crearGrafoVacio(int maxNodos) {
 		this.size = 0;
-		this.cantNodos = n;
+		this.cantNodos = maxNodos;
 		this.verticesAdyacentes = new Lista[this.cantNodos + 1];
 
 		for (int i = 0; i < this.cantNodos; i++) {
@@ -72,12 +73,6 @@ public class GrafoL implements IGrafoL {
 	}
 	
 	@Override
-	public void crearGrafo(int cantMax) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void agregarVertice(int numero) {
 		// TODO Auto-generated method stub
 
@@ -100,6 +95,4 @@ public class GrafoL implements IGrafoL {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	
 }
