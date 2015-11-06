@@ -57,8 +57,8 @@ public class GrafoM implements IGrafoM {
 	}
 
 	@Override
-	public Lista listaAdyacentes(int vertice) {
-		Lista adyacentes = new Lista();
+	public ListaVertices listaAdyacentes(int vertice) {
+		ListaVertices adyacentes = new ListaVertices();
 		for (int i = 1; i <= this.cantNodos; i++) {
 			if (this.sonAdyacentes(vertice, i)) {
 				adyacentes.insertarInicio(vertice);

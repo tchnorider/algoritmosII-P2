@@ -1,6 +1,6 @@
 package grafoMatrizAdyacencia;
 
-public class Lista implements IListaD {
+public class ListaVertices implements IListaD {
 
 	NodoLD inicio;
 	int peso;
@@ -13,7 +13,7 @@ public class Lista implements IListaD {
 		this.inicio = inicio;
 	}
 
-	public Lista() {
+	public ListaVertices() {
 		this.setInicio(null);
 	}
 

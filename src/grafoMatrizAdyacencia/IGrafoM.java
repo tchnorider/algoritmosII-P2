@@ -15,7 +15,7 @@ public interface IGrafoM {
 
 	public boolean sonAdyacentes(int origen, int destino);
 
-	public Lista listaAdyacentes(int vertice);
+	public ListaVertices listaAdyacentes(int vertice);
 
 	public boolean existeVertice(int v);
 
