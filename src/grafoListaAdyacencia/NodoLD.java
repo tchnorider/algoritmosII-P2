@@ -49,6 +49,6 @@ public class NodoLD {
 	}
 
 	public NodoLD() {
-		// TODO Auto-generated constructor stub
+		
 	}
 }
