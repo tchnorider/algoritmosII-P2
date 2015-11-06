@@ -3,8 +3,6 @@ package grafoMatrizAdyacencia;
 
 public interface IGrafoM {
 
-	public void crearGrafo(int cantMax);
-
 	public void agregarVertice(int numero);
 
 	public void agregarArista(int origen, int destino, int peso);

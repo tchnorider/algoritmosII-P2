@@ -76,15 +76,13 @@ public class GrafoM implements IGrafoM {
 		return this.matrizNodosAdyacentes[origen][destino].existe;
 	}
 
+	/*
+	 * Definiciones: Un grafo no dirigido es conexo si hay un camino desde cualquier vértice a cualquier otro.
+	 * 				 Un grafo dirigido con esta propiedad se denomina fuertemente conexo. 
+	 */
 	@Override
 	public boolean esConexo() {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	@Override
-	public void crearGrafo(int cantMax) {
-		// TODO Auto-generated method stub
-
 	}
 }
