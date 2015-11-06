@@ -1,7 +1,7 @@
 package grafoListaAdyacencia;
 
 public class GrafoL implements IGrafoL {
-	
+
 	private int size;
 	private int cantNodos;
 	private Lista[] verticesAdyacentes;
@@ -35,13 +35,20 @@ public class GrafoL implements IGrafoL {
 		this.cantNodos = cantNodos;
 	}
 
+	@Override
 	public void agregarArista(int origen, int destino, int peso) {
-		this.verticesAdyacentes[origen].insertarInicio(destino,peso);
+		this.verticesAdyacentes[origen].insertarInicio(destino, peso);
+	}
+
+	@Override
+	public void agregarVertice(int v) {
+		this.nodosUsados[v] = true;
+		this.size++;
 	}
 
 	@Override
 	public void eliminarArista(int origen, int destino) {
-
+		this.verticesAdyacentes[origen].borrar(destino);
 	}
 
 	public boolean esVacio() {
@@ -62,7 +69,8 @@ public class GrafoL implements IGrafoL {
 			this.verticesAdyacentes[i].borrar(v);
 		}
 	}
-
+	
+	@Override
 	public Lista verticesAdyacentes(int v) {
 		return this.verticesAdyacentes[v];
 	}
@@ -72,24 +80,6 @@ public class GrafoL implements IGrafoL {
 		return this.nodosUsados[v];
 	}
 	
-	@Override
-	public void agregarVertice(int numero) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void agregarArista(int origen, int destino) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Lista listaAdyacentes(int vertice) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	@Override
 	public boolean esConexo() {
 		// TODO Auto-generated method stub
