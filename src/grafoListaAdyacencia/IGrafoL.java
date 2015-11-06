@@ -14,7 +14,7 @@ public interface IGrafoL {
 
 	public void eliminarArista(int origen, int destino);
 
-	public boolean esAdyacente(int origen, int destino);
+	public boolean sonAdyacentes(int origen, int destino);
 
 	public Lista listaAdyacentes(int vertice);
 	

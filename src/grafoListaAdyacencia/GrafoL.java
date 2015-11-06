@@ -68,6 +68,11 @@ public class GrafoL implements IGrafoL {
 	}
 
 	@Override
+	public boolean existeVertice(int v) {
+		return this.nodosUsados[v];
+	}
+	
+	@Override
 	public void crearGrafo(int cantMax) {
 		// TODO Auto-generated method stub
 
@@ -86,12 +91,6 @@ public class GrafoL implements IGrafoL {
 	}
 
 	@Override
-	public boolean esAdyacente(int origen, int destino) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
 	public Lista listaAdyacentes(int vertice) {
 		// TODO Auto-generated method stub
 		return null;
@@ -103,8 +102,5 @@ public class GrafoL implements IGrafoL {
 		return false;
 	}
 
-	@Override
-	public boolean existeVertice(int v) {
-		return this.nodosUsados[v];
-	}
+	
 }

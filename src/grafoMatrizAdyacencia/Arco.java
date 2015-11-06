@@ -5,6 +5,7 @@ public class Arco {
 	int origen;
 	int destino;
 	int peso;
+	public boolean existe;
 
 	public Arco(int peso) {
 		this.peso = peso;

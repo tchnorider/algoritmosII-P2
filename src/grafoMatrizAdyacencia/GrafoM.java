@@ -40,33 +40,41 @@ public class GrafoM implements IGrafoM {
 	}
 
 	@Override
-	public void crearGrafo(int cantMax) {
-		// TODO Auto-generated method stub
+	public void eliminarVertice(int v) {
+		this.nodosUsados[v] = false;
+		this.size--;
 
-	}
+		for (int i = 1; i <= cantNodos; i++) {
 
-	@Override
-	public void eliminarVertice(int numero) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public boolean esAdyacente(int origen, int destino) {
-		// TODO Auto-generated method stub
-		return false;
+			this.matrizNodosAdyacentes[i][v] = new Arco();
+			this.matrizNodosAdyacentes[v][i] = new Arco();
+		}
 	}
 
 	@Override
 	public Lista listaAdyacentes(int vertice) {
-		// TODO Auto-generated method stub
-		return null;
+		Lista adyacentes = new Lista();
+		for (int i = 1; i <= this.cantNodos; i++) {
+			if (this.sonAdyacentes(vertice, i)) {
+				adyacentes.insertarInicio(vertice);
+			}
+		}
+		return adyacentes;
 	}
 
 	@Override
 	public boolean existeVertice(int v) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.nodosUsados[v];
+	}
+
+	@Override
+	public boolean esVacio() {
+		return this.size == 0;
+	}
+
+	@Override
+	public boolean sonAdyacentes(int origen, int destino) {
+		return this.matrizNodosAdyacentes[origen][destino].existe;
 	}
 
 	@Override
@@ -75,5 +83,9 @@ public class GrafoM implements IGrafoM {
 		return false;
 	}
 
-	// TODO resto
+	@Override
+	public void crearGrafo(int cantMax) {
+		// TODO Auto-generated method stub
+
+	}
 }
