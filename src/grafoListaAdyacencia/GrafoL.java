@@ -82,7 +82,7 @@ public class GrafoL implements IGrafoL {
 	
 	@Override
 	public boolean esConexo() {
-		// TODO Auto-generated method stub
+		// TODO >> esConexo..?
 		return false;
 	}
 }
